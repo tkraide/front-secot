@@ -37,6 +37,22 @@ export default function App() {
         </header>
       </div>
 
+      <div className="quem-somos-conteiner">
+        <div className="secot-quem-somos">
+          <div className="img-secot">
+          </div>
+
+          <div className="conteudo-quem-somos">
+          <h2>VOCÊ CONHECE A SECOT?</h2>
+          <p>A 13ª edição da Semana da Computação e Tecnologia (SeCoT XIII) é um evento organizado pelos alunos de Ciência da Computação da UFSCar Sorocaba. O objetivo da SeCoT é proporcionar um evento gratuito e online de apresentação, debate e aprendizado sobre as diversas áreas da computação, contando com palestras de variados assuntos que podem atender tanto estudantes quanto profissionais do mercado.</p>
+
+          <h3>Em 2021, a SeCoT ocorrerá entre os dias 23 a 26 de agosto.</h3>
+
+          <p>A partir do dia 15 de julho de 2021, teremos a SeCoT Carreiras, uma série de encontros com empresas para discutir aspectos bastante importantes da vida profissional. Assim, será possível entender as diferentes carreiras que cada instituição tem e, também, aprender sobre temas como LinkedIn, dinâmica, inovação e entrevista.</p>
+          </div>
+        </div>
+      </div>
+
       <footer className="footer-bg">
         <div className="footer-grid">
           <div className="grid-1">
