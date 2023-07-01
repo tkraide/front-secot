@@ -176,7 +176,7 @@ export default function App() {
               <path d="M38.9797 20.4385C38.9797 20.5274 38.9924 20.5592 39.0114 20.5147C39.0241 20.4766 39.0241 20.4005 39.0114 20.356C38.9924 20.3179 38.9797 20.3497 38.9797 20.4385Z" fill="#AF0000" />
               <path d="M6.85657 27.1044C6.85657 27.1933 6.86926 27.2251 6.88831 27.1806C6.90101 27.1425 6.90101 27.0663 6.88831 27.0219C6.86926 26.9838 6.85657 27.0156 6.85657 27.1044Z" fill="#AF0000" />
             </svg>
-            <h2><span id="red-S">S</span>ecot</h2>
+            <h2><span id="red-S">S</span>eCoT</h2>
           </div>
           <div className="header-menu">
             <ul className="header-menu-list">
@@ -195,7 +195,7 @@ export default function App() {
 
       <section className="inicio">
         <div className="inicio-texto">
-          <h1>Boas-Vindas a SECOT</h1>
+          <h1>Boas-Vindas a SeCoT</h1>
           <h2>O maior evento de tecnologia da região</h2>
           <h3>Evento gratuito e online com palestras, debates e aprendizados sobre as diversas áreas da computação</h3>
           <button><img src={ytBordaBranca} alt="Youtube" />Inscreva-se</button>
@@ -214,7 +214,7 @@ export default function App() {
       <section className="inicioMobile">
         <img className="imgMenino" src={menino} alt="Menino" />
         <div className="inicio-textoMobile">
-          <h1>Boas-Vindas a SECOT</h1>
+          <h1>Boas-Vindas a SeCoT</h1>
           <h2>O maior evento de tecnologia da região</h2>
           <h3>Evento gratuito e online com palestras, debates e aprendizados sobre as diversas áreas da computação</h3>
           <button><img src={ytBordaBranca} alt="Youtube" />Inscreva-se</button>
@@ -257,7 +257,7 @@ export default function App() {
           <div className="img-secot">
           </div>
           <div className="conteudo-quem-somos">
-            <h2>VOCÊ CONHECE A SECOT?</h2>
+            <h2>Você conhece a SeCoT?</h2>
             <p>A 13ª edição da Semana da Computação e Tecnologia (SeCoT XIII) é um evento organizado pelos alunos de Ciência da Computação da UFSCar Sorocaba. O objetivo da SeCoT é proporcionar um evento gratuito e online de apresentação, debate e aprendizado sobre as diversas áreas da computação, contando com palestras de variados assuntos que podem atender tanto estudantes quanto profissionais do mercado.</p>
 
             <h3>Em 2021, a SeCoT ocorrerá entre os dias 23 a 26 de agosto.</h3>
@@ -295,10 +295,9 @@ export default function App() {
                   <path d="M38.9797 20.4385C38.9797 20.5274 38.9924 20.5592 39.0114 20.5147C39.0241 20.4766 39.0241 20.4005 39.0114 20.356C38.9924 20.3179 38.9797 20.3497 38.9797 20.4385Z" fill="white" />
                   <path d="M6.85657 27.1043C6.85657 27.1932 6.86926 27.2249 6.88831 27.1805C6.90101 27.1424 6.90101 27.0662 6.88831 27.0218C6.86926 26.9837 6.85657 27.0154 6.85657 27.1043Z" fill="white" />
                 </svg>
-                <h2><span id="white-S">S</span>ecot</h2>
+                <h2><span id="white-S">S</span>eCoT</h2>
               </div>
-              <p>©2022 Secot.</p>
-              <p>Todos os direitos reservados.</p>
+              <p>&copy; {new Date().getUTCFullYear()} SeCoT. Todos os direitos reservados</p>
             </div>
             <div className="grid-2">
               <h3>Realização</h3>
