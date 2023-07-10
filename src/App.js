@@ -160,6 +160,16 @@ export default function App() {
     };
   }, [cards]);
 
+  //menu responsivo
+  let show = true;
+  const menuToggle = document.querySelector(".hamburguer-button");
+  const menuHamb = menuToggle.querySelector(".hamburguer-items");
+
+  menuToggle.addEventListener("click", () => {
+    menuHamb.classList.toggle("on", show);
+    show = !show;
+  })
+
   return (
     <div className="App">
       <div className="header-container">
@@ -189,6 +199,17 @@ export default function App() {
           <div className="header-login">
             <a href="./" className="login-link">Log In</a>
             <a href="./" className="create-acc">CRIAR CONTA</a>
+          </div>
+          <div className="hamburguer-button">
+            <button> <img src={hamburguer}></img> </button>
+            <div className="hamburguer-items">
+              <span>Início</span>
+              <span>Programação</span>
+              <span>Sobre</span>
+              <span>Patrocinadores</span>
+              <span>Log in</span>
+              <span>Criar Conta</span>
+            </div>
           </div>
         </header>
       </div>
@@ -224,31 +245,31 @@ export default function App() {
         <div className="container">
           <h2>Hoje teremos!</h2>
           <div className="cards">
-          {
-            visibleCards.map((card, i) => {
-              const horarioInicio = moment().tz(targetTimezone).hour(card.horarioInicio).startOf('hour');
-              const horarioFim = moment().tz(targetTimezone).hour(card.horarioFim).endOf('hour');
-              const isButtonVisible = moment(currentDateTime.date).isBetween(horarioInicio, horarioFim);
+            {
+              visibleCards.map((card, i) => {
+                const horarioInicio = moment().tz(targetTimezone).hour(card.horarioInicio).startOf('hour');
+                const horarioFim = moment().tz(targetTimezone).hour(card.horarioFim).endOf('hour');
+                const isButtonVisible = moment(currentDateTime.date).isBetween(horarioInicio, horarioFim);
 
-              return (
-                <div key={i} className="card">
-                  <h3>{card.titulo}</h3>
-                  <Modal
-                    titulo={card.titulo}
-                    palestrante={card.palestrante}
-                    data={card.data}
-                    horario={card.horario}
-                    descricao={card.descricao}
-                    estado={card.estado}
-                    visiBotao={isButtonVisible}
-                    diaSemana={card.diaSemana}
-                  />
-                  <span className="horario">{card.diaSemana}, {card.data} às {card.horario}</span>
-                  <span className="local"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"></path></svg>&nbsp;<a href={card.linkLocal} target="_blank">{card.local}</a></span>
-                </div>
-              );
-            })
-          }
+                return (
+                  <div key={i} className="card">
+                    <h3>{card.titulo}</h3>
+                    <Modal
+                      titulo={card.titulo}
+                      palestrante={card.palestrante}
+                      data={card.data}
+                      horario={card.horario}
+                      descricao={card.descricao}
+                      estado={card.estado}
+                      visiBotao={isButtonVisible}
+                      diaSemana={card.diaSemana}
+                    />
+                    <span className="horario">{card.diaSemana}, {card.data} às {card.horario}</span>
+                    <span className="local"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"></path></svg>&nbsp;<a href={card.linkLocal} target="_blank">{card.local}</a></span>
+                  </div>
+                );
+              })
+            }
           </div>
         </div>
       </section>
