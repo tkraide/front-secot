@@ -165,10 +165,9 @@ export default function App() {
   const menuToggle = document.querySelector(".hamburguer-button");
   const menuHamb = menuToggle.querySelector(".hamburguer-items");
 
-  menuToggle.addEventListener("click", () => {
-    menuHamb.classList.toggle("on", show);
-    show = !show;
-  })
+   menuToggle.addEventListener("click", () => {
+     menuHamb.classList.toggle("on");
+   })
 
   return (
     <div className="App">
