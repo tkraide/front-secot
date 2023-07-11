@@ -163,10 +163,11 @@ export default function App() {
   //menu responsivo
   useEffect(() => {
     const menuToggle = document.querySelector(".hamburguer-button");
+    const buttonMenu = menuToggle.querySelector("button");
     const menuHamb = menuToggle.querySelector(".hamburguer-items");
     let show = true;
 
-    menuToggle.addEventListener("click", () => {
+    buttonMenu.addEventListener("click", () => {
       console.log('Button clicked');
       menuHamb.classList.toggle("on", show);
       show = !show;
