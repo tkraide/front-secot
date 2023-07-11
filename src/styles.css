@@ -444,6 +444,10 @@ box-shadow: 4px 4px 5px 0px rgba(112,112,112,0.7);
   display: none;
 }
 
+.hamburguer-button button {
+  cursor: pointer;
+}
+
 .hamburguer-items {
   display: none;
   color: var(--dark, #0F241D);

@@ -161,13 +161,18 @@ export default function App() {
   }, [cards]);
 
   //menu responsivo
-  let show = true;
-  const menuToggle = document.querySelector(".hamburguer-button");
-  const menuHamb = menuToggle.querySelector(".hamburguer-items");
+  useEffect(() => {
+    const menuToggle = document.querySelector(".hamburguer-button");
+    const menuHamb = menuToggle.querySelector(".hamburguer-items");
+    let show = true;
 
-   menuToggle.addEventListener("click", () => {
-     menuHamb.classList.toggle("on");
-   })
+    menuToggle.addEventListener("click", () => {
+      console.log('Button clicked');
+      menuHamb.classList.toggle("on", show);
+      show = !show;
+      console.log(show);
+    });
+  }, []);
 
   return (
     <div className="App">
